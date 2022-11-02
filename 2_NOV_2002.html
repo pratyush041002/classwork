@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+	$(document).ready(function (){
+		$("#b1").click(function (){
+			alert("Text: " + $("#par").text());
+});
+
+       $("#b2").click(function(){
+		alert("HTML : " + $("#par").html());
+});
+      $("#button1").click(function(){
+         alert("Value: " + $("#txt").val());
+	});
+	
+        $("#button2").click(function(){
+		alert ($(".google").attr("href"));
+});
+
+ $("#button3").click(function(){
+ $("#par1").text("Hi User!");
+ });
+ $("#button4").click(function(){
+ $("#par2").html("<b>Hi User!</b>");
+ });
+ $("#button5").click(function(){
+ $("#par3").val("Shane");
+ });
+
+
+$("#button6").click(function(){
+ $("#w3s").attr("href", "https://www.reddit.com");
+ });
+
+ $("#button7").click(function(){
+ $(".paragraph").append(" <b>Coded by :- Pratyush Nayak</b>.");
+ });
+ $("#button8").click(function(){
+ $("ul").append("<li>Soup</li>");
+ });
+
+
+ $("#button9").click(function(){
+ $(".paragraph2").prepend("<b>Coded by :- Pratyush Nayak </b>. ");
+ });
+ $("#button10").click(function(){
+ $("#ol").prepend("<li> Chicken Nuggets</li>");
+ });
+
+
+
+
+ $("#button11").click(function(){
+ $("img").before("<b>Adding text before the image.</b>");
+ });
+ $("#button12").click(function(){
+ $("img").after("Adding text after the image.");
+ });
+
+ $("#button13").click(function(){
+ $("#id").remove();
+ });
+
+ $("#button14").click(function(){
+	$(".paragraph4").remove() ; 
+ });
+
+$("#button15").click(function(){
+ $("#id2").empty();
+ });
+
+$("#button16").click(function(){
+ $(".paragraph5").addClass("green");
+ $("#id3").addClass("size");
+ });
+
+$("#button17").click(function(){
+ $(".paragraph5").removeClass("green");
+ $("#id3").removeClass("size");
+ });
+
+
+$("#button18").click(function(){
+ $(".paragraph5").toggleClass("green");
+ $("#id3").toggleClass("size");
+ });
+
+ $("#button19").click(function(){
+ alert("Background color = " + $("#p11").css("background-color"));
+ alert("Background color = " + $("#p22").css("background-color"));
+ alert("Background color = " + $("#p33").css("background-color"));
+ });
+});
+
+
+</script>
+
+
+<style>
+ .size {
+ font-size: 32px;
+ }
+ .green {
+ color: green;
+ }
+ </style>
+</head>
+<body>
+<p id = "par"> This line is a part of  paragraph <b> and contains a bold text . </b> </p>
+<button id = "b1">Dispaly Text </button>
+<button id = "b2">Display HTML code </button>
+
+<p> Username : <input type = "text" id = "txt" value = "Enter your name"></p>
+<button id = "button1"> Click here to check the value </button>
+
+<p> <a href ="https://www.google.co.in" class = "google"> Google.com</a></p>
+<button id = "button2">Show href value </button>
+<p id = "par1">This is our first paragraph </p>
+<p id = "par2">This is our Second paragraph </p>
+<p> Input field : <input type = "text" id = "par3" value = "Rick"></p>
+<button id = "button3"> Setting any textual information </button>
+<button id = "button4"> Setting any HTML data </button>
+<button id = "button5"> Setting any value </button> 
+
+
+<p id="para1"><a href="https://www.google.com" id="w3s">Google.com</a></p>
+<button id="button6">Click to change the href value</button>
+<p>After clicking the link, place your cursor on the hyperlink and check the link
+address or click it to go to other website.</p>
+
+
+<p class = "paragraph">This is the first paragraph.</p>
+<p class = "paragraph">This is the second paragraph.</p>
+<ul id = "#ul">
+ <li>Coffee</li>
+ <li>Tea</li>
+ <li>Water</li>
+</ul>
+<button id="button7">Append content at the end of paragraph.</button>
+<button id="button8">Append item at the end of the list.</button>
+
+<p class = "paragraph2">This is first paragraph </p>
+<p class = "paragraph2">This is second paragraph </p>
+
+<ol id = "ol">
+ <li>Pizza</li>
+ <li>Burger</li>
+ <li>Sandwich</li>
+</ol>
+<button id = "button9"> Prepend content at the end of the para </button>
+<button id = "button10">Prepend at te end of the list </button>
+<br><br>
+
+<img src="SOA.png" alt="jQuery" width="400px" height="400px">
+<br><br>
+<button id="button11">Adding text before the image.</button>
+<button id="button12">Adding text after the image.</button>
+
+
+<div id="id" style=" height:500px; width:500px ; border:3px solid green;
+background-color : orange ;">
+   We are using div element in our example.
+   <p class = "paragraph4">A button is used for deletion.</p>
+    <p class =  "paragraph4" >The button calls out the remove() method to delete the element.</p>
+</div>
+
+<br>
+
+<button id = "button13">Delete the div element from the page.</button>
+<br>
+
+<button id = "button14">Delete the paragraph from the page.</button>
+
+<div id="id2" style="height:500px;width:500px;border:3px solid green;
+background-color:yellow;">
+We are using div element in our example.
+<p>A button is used for deletion.</p>
+<p>The button calls out the remove() method to delete the element.</p>
+</div>
+<br>
+<button id = "button15">Delete the div element from the page.</button>
+
+<br>
+
+	 <h1 class = "paragraph5">The	is	the	first	heading!</h1>
+ <h2 class = "paragraph5">The is the second heading!</h2>
+	 <p class = "paragraph5">This	is	the	first	paragraph.</p>
+ <p class = "paragraph5">This is the second paragraph.</p>
+ <div id = "id3">This is a piece of vital information written inside a div . </div>
+<br>
+
+ <button id = "button16">Push classes in elements</button>
+<br>
+<br>
+ <button id = "button17">Pull classes in elements</button>
+<br>
+<br>
+
+ <button id = "button18">Toggle classes in elements</button>
+
+<br>
+<br>
+
+<h2>This is a heading</h2>
+	 <p id="p11" style="background-color:dodgerblue">This is the first paragraph.</p>
+<p id="p22" style="background-color:orange">This is the second paragraph.</p>
+<p id="p33" style="background-color:yellow">This is the third paragraph.</p>
+<br>
+<button id = "button19">Show the background color of each paragraph.</button>
+<br>
+<br>
+
+</body>
+</html>
