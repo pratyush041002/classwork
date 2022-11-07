@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> </title>
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+</script>
+<script>
+$(document).ready(function() {
+		
+	$("h1").click(function(){
+	$(this).css("color" , "blue");
+	});	
+	
+	$("p").click(function () {
+	$("p").css("font-size" , "32px"); 
+	});
+	
+	$("p:first").click(function() {
+	$("p:first").css("color" , "red") ; 
+	});
+	
+	$("ul li:first").click(function (){
+	$(this).css("font-size" , "40px");
+	});
+	
+	$("[href]").mouseenter(function (){
+	$(this).css("font-size" , "50px") ;
+	$(this).css("color" , "orange");
+	});
+	
+	$("[href]").mouseleave(function (){
+	$(this).css("font-size" , "100%") ;
+	$(this).css("color" , "purple");
+	});
+	
+	$("p.intro").mouseenter(function() {
+	$(this).css("color" , "green") ; 
+	});
+	
+	$("p.intro").mouseleave(function() {
+	$(this).css("color" , "brown") ; 
+	});
+	
+	$("a [target = 'blank']").mouseenter(function () {
+	alert("This link is a blank") ; 
+	});
+	
+	$(".table_wala_button").click(function(){
+	$("tr:even").css("background-color" , "yellow"); 
+	$("tr:odd").css("background-color" , "orange"); 
+	});
+}); 
+</script>
+
+</head>
+<body>
+<h1>This is a heading . </h1>
+
+<p> this is a  paragraph </p>
+<p> This is an another paragraph </p>
+<p class = "intro">this is the inro part of the paragraph </p> 
+<ul>
+<li>Pratyush Nayak </li>
+<li>Pratik</li
+</ul>
+<a href = "https://www.google.co.in">Click here to go to google</a>
+<br>
+<a href=""> empty link</a>
+<br>
+
+<table cellspacing = "20px">
+<tr>
+<th>Name</th>
+<th>Percentage</th>
+<th>Class</th>
+<th>Year</th>
+</tr>
+<tr>
+<td>Pratyush Nayak</td>
+<td>89</td>
+<td>10</td>
+<td>2018-19</td>
+</tr>
+<tr>
+<td>Pratyush Nayak</td>
+<td>89</td>
+<td>12</td>
+<td>2020-21</td>
+</tr>
+<tr>
+<td>Pratyush Nayak</td>
+<td>65</td>
+<td>B.tech</td>
+<td>2021-25</td>
+</tr>
+<tr>
+<td>Susanta Kumar Sutar</td>
+<td>65</td>
+<td>10</td>
+<td>2019-21</td>
+</tr>
+<td>Susanta Kumar Sutar</td>
+<td>79</td>
+<td>12</td>
+<td>2020-21</td>
+</tr>
+<tr>
+<td>Susanta Kumar Sutar</td>
+<td>65</td>
+<td>B.tech</td>
+<td>2021-25</td>
+</tr>
+</table>
+<button class = "table_wala_button"> Click here to change the color of the table</button>
+</body>
+</html>
