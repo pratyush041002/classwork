@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>8th Nov 22</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+	$(document).ready(function(){
+	$(".add").click(function(){
+	alert(parseInt($("#first_number").val())+ parseInt($("#second_number").val())); 
+});
+$(".subtract").click(function(){
+	alert(parseInt($("#first_number").val())-parseInt($("#second_number").val())); 
+});
+$(".multiply").click(function(){
+	alert(parseInt($("#first_number").val())*parseInt($("#second_number").val())); 
+});
+$(".divide").click(function(){
+	alert(parseInt($("#first_number").val())/parseInt($("#second_number").val())); 
+});
+});
+</script>
+</head>
+<body>
+<input type = "text" id = "first_number" label = "Enter number"></input>
+<input type = "text" id = "second_number" label = "Enter number"></input>
+<br>
+<button class = "add"> + </button>
+<button class = "subtract"> - </button>
+<button class = "multiply"> * </button>
+<button class = "divide"> / </button>
+</body>
+</html>
